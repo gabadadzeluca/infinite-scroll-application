@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&family=Open+Sans:wght@400;600&display=swap');
+
 *,*::before,*::after{
   margin: 0;
   padding: 0;
@@ -6,6 +8,8 @@
 html{
   font-size: 62.5%;
   color: white;
+  font-family: 'Antonio', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 body{
   background-color: rgba(15, 14, 14, 0.829);
