@@ -5,8 +5,8 @@
   width: 50%;
   font-size: 1.5rem;
   padding: 2rem 4rem;
-  outline: 1px solid #6130e8;
-  background-color: aliceblue;
+  outline: 1px solid #ffffff;
+  background-color: rgb(68, 64, 64);
   margin: 2rem 0;
   border-radius: .5rem;
 }
