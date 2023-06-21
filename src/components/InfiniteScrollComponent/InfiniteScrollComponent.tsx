@@ -62,7 +62,7 @@ export default function InfiniteScrollComponent() {
         }
         return <PostComponent key={index} post={post} />;
       })}
-      {!isLoaded && <div>Loading...</div>}
+      {!isLoaded && <div className={styles.loading}>Loading...</div>}
     </div>
   );
 }
