@@ -1,0 +1,23 @@
+.postDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  font-size: 1.5rem;
+  padding: 2rem 4rem;
+  outline: 1px solid #6130e8;
+  background-color: aliceblue;
+  margin: 2rem 0;
+}
+
+.postDiv>p{
+  margin-bottom: 1.5rem;
+}
+.postDiv>img{
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.postDiv>h4{
+  font-size: 1.5rem;
+}
