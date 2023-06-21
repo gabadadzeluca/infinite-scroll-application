@@ -10,7 +10,7 @@ const LAST_PAGE_INDEX = Math.floor(ITEMS_COUNT/ITEMS_PER_PAGE) - 1;
 
 export default function InfiniteScrollComponent() {
   const [data, setData] = useState<DataObjectInterface[]>([]);
-  const [currentPage, setCurrentPage] = useState<number>(300);
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [limitReached, setLimitReached] = useState<boolean>(false);
   
