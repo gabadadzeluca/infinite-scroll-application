@@ -5,4 +5,8 @@
 }
 html{
   font-size: 62.5%;
+  color: white;
+}
+body{
+  background-color: rgba(15, 14, 14, 0.829);
 }
