@@ -10,7 +10,7 @@ const LAST_PAGE_INDEX = Math.floor(ITEMS_COUNT/ITEMS_PER_PAGE) - 1;
 
 export default function InfiniteScrollComponent() {
   const [data, setData] = useState<DataObjectInterface[]>([]);
-  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [currentPage, setCurrentPage] = useState<number>(300);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [limitReached, setLimitReached] = useState<boolean>(false);
   
@@ -37,7 +37,7 @@ export default function InfiniteScrollComponent() {
     const API_URL = `https://jsonplaceholder.typicode.com/photos/?_start=${startIndex}&_limit=${endIndex}`;
     console.log('Making Request')
     if (currentPage > LAST_PAGE_INDEX) {
-      console.log("LIMIT REACHED");
+      setIsLoaded(true);
       setLimitReached(true);
       return;
     }
