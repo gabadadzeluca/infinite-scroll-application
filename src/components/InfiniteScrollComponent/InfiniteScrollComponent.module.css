@@ -1,0 +1,11 @@
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading{
+  margin: 4rem 0;
+  font-size: 5rem;
+}
