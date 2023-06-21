@@ -12,7 +12,8 @@ export default function InfiniteScrollComponent() {
   const [data, setData] = useState<DataObjectInterface[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
-
+  const [limitReached, setLimitReached] = useState<boolean>(false);
+  
   const startIndex = (currentPage-1) * ITEMS_PER_PAGE;
   const endIndex = (currentPage) * ITEMS_PER_PAGE;
   const observer = useRef<IntersectionObserver | null>(null);
@@ -37,9 +38,11 @@ export default function InfiniteScrollComponent() {
     console.log('Making Request')
     if (currentPage > LAST_PAGE_INDEX) {
       console.log("LIMIT REACHED");
+      setLimitReached(true);
       return;
     }
     try {
+      setLimitReached(false);
       const res = await axios.get(API_URL);
       setData(res.data);
       setIsLoaded(true);
@@ -63,6 +66,7 @@ export default function InfiniteScrollComponent() {
         return <PostComponent key={index} post={post} />;
       })}
       {!isLoaded && <div className={styles.loading}>Loading...</div>}
+      {limitReached && <div className={styles.limitReached}>Limit Reached</div>}
     </div>
   );
 }
